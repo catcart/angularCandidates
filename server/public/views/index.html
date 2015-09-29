@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyFirstAngular">
+    <head>
+        <meta charset="UTF-8">
+        <script src="/vendor/angular/angular.min.js"></script>
+        <script src="/assets/scripts/app.min.js"></script>
+        <title></title>
+    </head>
+    <body ng-controller="MainController">
+    <button ng-click="loadCandidates()">Candidates</button>
+        <ul>Democrats
+            <li ng-repeat="items in demList">
+                {{items}}
+            </li>
+        </ul>
+        <ul>Republicans
+            <li ng-repeat="items in repList">
+                {{items}}
+            </li>
+        </ul>
+        <button ng-click="electPresident()">Newly Generated President</button>
+            <p ng-show="winner">{{winner}}</p>
+    </body>
+</html>
